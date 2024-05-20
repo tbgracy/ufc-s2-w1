@@ -1,14 +1,19 @@
 @import 'variables';
 
+@font-face {
+    font-family: 'Nunito';
+    src: url('./fonts/Nunito-VariableFont_wght.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 body {
-    background: linear-gradient(45deg, rgb(183, 145, 193), rgb(97, 207, 234) 40%, rgb(224, 122, 185));
+    background: linear-gradient(45deg, rgb(183, 145, 193), rgb(97, 207, 234), rgb(224, 122, 185));
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;

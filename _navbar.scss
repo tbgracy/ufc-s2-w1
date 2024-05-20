@@ -7,7 +7,7 @@ nav {
     padding-inline: 10rem;
     padding-top: 2rem;
 
-    &>ul {
+    ul {
         display: flex;
         gap: .5rem;
 
@@ -16,26 +16,63 @@ nav {
             cursor: pointer;
             padding: .5rem;
 
+            &:hover a {
+                color: black;
+            }
+
             a {
+                transition: color $transition-duration;
                 color: white;
                 text-decoration: none;
+                font-weight: bold;
             }
 
             &:has(ul) {
-                &:after {
-                    content: '>';
-                    margin-left: .5rem;
+                position: relative;
+                margin-right: 1rem;
+
+                &::after {
+                    content: 'v';
+                    font-weight: bold;
+                    position: absolute;
+                    margin-left: .4rem;
                     color: white;
-                    transform: rotate(90deg);
+                    transition: transform $transition-duration, color $transition-duration;
+                }
+
+                &:hover::after {
+                    transform: rotate(.5turn);
+                    color: black;
                 }
 
                 &:hover ul {
-                    display: block;
-                    position: absolute;
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
                 }
 
                 ul {
-                    display: none;
+                    margin-top: 1rem;
+                    transition-property: visibility, opacity, transform;
+                    transition-duration: $transition-duration;
+                    transform: translateY(-1rem);
+                    position: absolute;
+                    display: block;
+                    visibility: hidden;
+                    opacity: 0;
+                    background-color: white;
+                    border-radius: 1rem;
+                    padding: .5rem;
+
+
+                    li {
+                        transition: background-color $transition-duration;
+
+                        &:hover {
+                            background-color: rgba(0, 0, 0, 0.082);
+                            border-radius: .5rem;
+                        }
+                    }
                 }
             }
         }
