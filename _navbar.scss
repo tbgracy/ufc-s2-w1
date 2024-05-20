@@ -33,15 +33,15 @@ nav {
 
                 &::after {
                     content: 'v';
-                    font-weight: bold;
                     position: absolute;
                     margin-left: .4rem;
+                    transform: scaleX(1.5);
                     color: white;
-                    transition: transform $transition-duration, color $transition-duration;
+                    transition: rotate $transition-duration, color $transition-duration;
                 }
 
                 &:hover::after {
-                    transform: rotate(.5turn);
+                    rotate: .5turn;
                     color: black;
                 }
 

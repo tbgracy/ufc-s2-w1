@@ -54,14 +54,14 @@ nav ul li:has(ul) {
 }
 nav ul li:has(ul)::after {
   content: "v";
-  font-weight: bold;
   position: absolute;
   margin-left: 0.4rem;
+  transform: scaleX(1.5);
   color: white;
-  transition: transform 0.3s, color 0.3s;
+  transition: rotate 0.3s, color 0.3s;
 }
 nav ul li:has(ul):hover::after {
-  transform: rotate(0.5turn);
+  rotate: 0.5turn;
   color: black;
 }
 nav ul li:has(ul):hover ul {
