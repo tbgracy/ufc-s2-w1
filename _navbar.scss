@@ -1,0 +1,43 @@
+// Navbar
+nav {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 10rem;
+    padding-top: 2rem;
+
+    &>ul {
+        display: flex;
+        gap: 1rem;
+
+        li {
+            list-style: none;
+            cursor: pointer;
+            padding: .5rem;
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+
+            &:has(ul) {
+                &:after {
+                    content: '>';
+                    margin-left: .5rem;
+                    color: white;
+                    transform: rotate(90deg);
+                }
+
+                &:hover ul {
+                    display: block;
+                    position: absolute;
+                }
+
+                ul {
+                    display: none;
+                }
+            }
+        }
+    }
+}

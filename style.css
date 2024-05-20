@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: linear-gradient(45deg, rgb(183, 145, 193), rgb(97, 207, 234) 40%, rgb(224, 122, 185));
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.logo {
+  width: 4rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+nav {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 10rem;
+  padding-top: 2rem;
+}
+nav > ul {
+  display: flex;
+  gap: 1rem;
+}
+nav > ul li {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+nav > ul li a {
+  color: white;
+  text-decoration: none;
+}
+nav > ul li:has(ul):after {
+  content: ">";
+  margin-left: 0.5rem;
+  color: white;
+  transform: rotate(90deg);
+}
+nav > ul li:has(ul):hover ul {
+  display: block;
+  position: absolute;
+}
+nav > ul li:has(ul) ul {
+  display: none;
+}
+
+button,
+.button {
+  color: black;
+  font-weight: bold;
+  border-radius: 10rem;
+  border: 2px solid white;
+  padding: 0.8rem 2rem;
+}
+button.button-primary,
+.button.button-primary {
+  background-color: white;
+}/*# sourceMappingURL=style.css.map */
