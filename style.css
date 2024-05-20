@@ -83,11 +83,13 @@ nav ul li:has(ul) ul {
   padding: 0.5rem;
 }
 nav ul li:has(ul) ul li {
-  transition: background-color 0.3s;
+  transition-property: background-color;
+  border-radius: 0.5rem;
+  transition-duration: 1.2s;
 }
 nav ul li:has(ul) ul li:hover {
   background-color: rgba(0, 0, 0, 0.082);
-  border-radius: 0.5rem;
+  transition-duration: 0.3s;
 }
 
 button,

@@ -51,6 +51,7 @@ nav {
                     transform: translateY(0);
                 }
 
+                // submenu
                 ul {
                     margin-top: 1rem;
                     transition-property: visibility, opacity, transform;
@@ -66,11 +67,13 @@ nav {
 
 
                     li {
-                        transition: background-color $transition-duration;
+                        transition-property: background-color;
+                        border-radius: .5rem;
+                        transition-duration: calc($transition-duration * 4);
 
                         &:hover {
                             background-color: rgba(0, 0, 0, 0.082);
-                            border-radius: .5rem;
+                            transition-duration: $transition-duration;
                         }
                     }
                 }
